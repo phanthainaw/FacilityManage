@@ -1,0 +1,32 @@
+.requestForm{
+    margin: 10px;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 10px;
+  }
+
+  .requestList{
+    margin: 7px ;
+    height: 200px;
+    border-radius: 10px;
+    overflow: scroll;
+  }
+
+th,td{
+    border: 1px, solid grey;
+    height: 20px;
+
+}
+  .requestTable{
+    border-radius: 10px ;
+    width: 100%;
+    border-collapse: collapse;
+    
+    table-layout: auto;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: #b1b1b1;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
