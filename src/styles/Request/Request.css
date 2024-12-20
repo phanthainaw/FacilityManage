@@ -1,0 +1,21 @@
+.requestForm {
+  padding: 5px;
+
+}
+.requestContainer {
+  display: grid;
+  grid-template-columns: 3fr 1.25fr;
+  height: 800px;
+}
+
+.reviewRequestBox {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-rows: 1fr 100px;
+}
+.inputDescription {
+  height: 50px;
+  width: 90%;
+}

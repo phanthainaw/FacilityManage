@@ -1,0 +1,1423 @@
+{
+	"info": {
+		"_postman_id": "7b0e5df9-4c58-46e3-ac28-534091c9321c",
+		"name": "phantan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26466701"
+	},
+	"item": [
+		{
+			"name": "supplier",
+			"item": [
+				{
+					"name": "add supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {     \"supplierName\": \"Nhà Cung Cấp PhongVu Computer\",\r\n        \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\r\n        \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add supplier",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {     \"supplierName\": \"Nhà Cung Cấp A Computer\",\r\n        \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\r\n        \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin/suppliers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"suppliers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:05:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"supplierID\": 10,\n    \"supplierName\": \"Nhà Cung Cấp A Computer\",\n    \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\n    \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\n}"
+						}
+					]
+				},
+				{
+					"name": "all supllier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all supllier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/suppliers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"suppliers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 12:45:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"supplierID\": 1,\n        \"supplierName\": \"Nhà Cung Cấp TGDD\",\n        \"contactInfo\": \"Phone: 0901234567, Email: nccA@example.com\",\n        \"address\": \"123 Đường ABC, Quận 1, TP HCM\"\n    },\n    {\n        \"supplierID\": 2,\n        \"supplierName\": \"Nhà Cung Cấp HAIANH Computer\",\n        \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\n        \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\n    },\n    {\n        \"supplierID\": 3,\n        \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n        \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n        \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n    },\n    {\n        \"supplierID\": 4,\n        \"supplierName\": \"Nhà Cung Cấp HAIANHHHHHH Computer\",\n        \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\n        \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\n    },\n    {\n        \"supplierID\": 8,\n        \"supplierName\": \"Nhà Cung Cấp PhongVu Computer\",\n        \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\n        \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "edit supplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"supplierName\": \"Nhà Cung Cấp PhongVu Computer\",\r\n        \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\r\n        \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/suppliers/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"suppliers",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit supplier",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"supplierName\": \"Nhà Cung Cấp PhongVuuuu Computer\",\r\n        \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\r\n        \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin/suppliers/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"suppliers",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:05:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"supplierID\": 8,\n    \"supplierName\": \"Nhà Cung Cấp PhongVuuuu Computer\",\n    \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\n    \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete supllier",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get 1 supplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/suppliers/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"suppliers",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get 1 supplier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/suppliers/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"suppliers",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 12:45:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"supplierID\": 8,\n    \"supplierName\": \"Nhà Cung Cấp PhongVu Computer\",\n    \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\n    \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "departmnent",
+			"item": [
+				{
+					"name": "add departmnent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"departmentName\": \"Phòng Test\",\r\n        \"budget\": 1000000\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/departments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"departments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add departmnent",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"departmentName\": \"Phòng Test1\",\r\n        \"budget\": 1000000\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin/departments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"departments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:07:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"departmentID\": 12,\n    \"departmentName\": \"Phòng Test1\",\n    \"budget\": 1000000\n}"
+						}
+					]
+				},
+				{
+					"name": "all departmnent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/departments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"departments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all departmnent",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/departments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"departments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 12:43:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"departmentID\": 1,\n        \"departmentName\": \"Phòng Quản Lý\",\n        \"budget\": 5000000\n    },\n    {\n        \"departmentID\": 2,\n        \"departmentName\": \"Phòng Tài Chính\",\n        \"budget\": 3000000\n    },\n    {\n        \"departmentID\": 3,\n        \"departmentName\": \"Phòng IT\",\n        \"budget\": 1000000\n    },\n    {\n        \"departmentID\": 7,\n        \"departmentName\": \"Phòng Marketing\",\n        \"budget\": 250000\n    },\n    {\n        \"departmentID\": 8,\n        \"departmentName\": \"Phòng Nhân Sự\",\n        \"budget\": 500\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "edit departmnent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"departmentName\": \"Phòng Nhân Sự\",\r\n        \"budget\": 500\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/departments/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"departments",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit departmnent",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"departmentName\": \"Phòng Nhân Sự\",\r\n        \"budget\": 500000000\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin/departments/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"departments",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:07:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"departmentID\": 8,\n    \"departmentName\": \"Phòng Nhân Sự\",\n    \"budget\": 500000000\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete departmnent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/departments/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"departments",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get 1 departmnent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/departments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"departments",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get 1 departmnent",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin/departments/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"departments",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 12:43:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"departmentID\": 1,\n    \"departmentName\": \"Phòng Quản Lý\",\n    \"budget\": 5000000\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "add employee",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Vu Van Linh\",\r\n    \"email\": \"linh4@gmail.com\",\r\n    \"password\": \"linh4\",\r\n    \"position\": \"Manager\",\r\n    \"departmentName\": \"Phòng IT\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employees/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add employee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"Vu Van Linh\",\r\n    \"email\": \"linh5@gmail.com\",\r\n    \"password\": \"linh4\",\r\n    \"position\": \"Manager\",\r\n    \"departmentName\": \"Phòng IT\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:13:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"employeeID\": 13,\n    \"fullName\": \"Vu Van Linh\",\n    \"email\": \"linh5@gmail.com\",\n    \"password\": \"linh4\",\n    \"position\": \"Manager\",\n    \"department\": {\n        \"departmentID\": 3,\n        \"departmentName\": \"Phòng IT\",\n        \"budget\": 1000000\n    },\n    \"role\": \"ROLE_USER\"\n}"
+						}
+					]
+				},
+				{
+					"name": "all employee",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "0C9BEB9CCDE08431530C3BD471AF747A",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/employees/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"getall"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all employee",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "0C9BEB9CCDE08431530C3BD471AF747A",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/employees/getall",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees",
+										"getall"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:09:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"employeeID\": 1,\n        \"fullName\": \"Nguyen Van A\",\n        \"email\": \"nguyenvana@gmail.com\",\n        \"password\": \"password123\",\n        \"position\": \"Manager\",\n        \"department\": {\n            \"departmentID\": 1,\n            \"departmentName\": \"Phòng Quản Lý\",\n            \"budget\": 5000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 2,\n        \"fullName\": \"Tran Thi B\",\n        \"email\": \"tranthib@gmail.com\",\n        \"password\": \"password123\",\n        \"position\": \"Employee\",\n        \"department\": {\n            \"departmentID\": 2,\n            \"departmentName\": \"Phòng Tài Chính\",\n            \"budget\": 3000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 3,\n        \"fullName\": \"Le Thi C\",\n        \"email\": \"lethic@gmail.com\",\n        \"password\": \"password123\",\n        \"position\": \"Employee\",\n        \"department\": {\n            \"departmentID\": 3,\n            \"departmentName\": \"Phòng IT\",\n            \"budget\": 1000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 4,\n        \"fullName\": \"Pham Minh D\",\n        \"email\": \"phaminhd@gmail.com\",\n        \"password\": \"password123\",\n        \"position\": \"Manager\",\n        \"department\": {\n            \"departmentID\": 1,\n            \"departmentName\": \"Phòng Quản Lý\",\n            \"budget\": 5000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 5,\n        \"fullName\": \"Ngo Minh E\",\n        \"email\": \"ngominhe@gmail.com\",\n        \"password\": \"password123\",\n        \"position\": \"Employee\",\n        \"department\": {\n            \"departmentID\": 2,\n            \"departmentName\": \"Phòng Tài Chính\",\n            \"budget\": 3000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 6,\n        \"fullName\": \"Nguyen Van A\",\n        \"email\": \"nguyenvana@example.com\",\n        \"password\": \"123456\",\n        \"position\": \"Manager\",\n        \"department\": {\n            \"departmentID\": 1,\n            \"departmentName\": \"Phòng Quản Lý\",\n            \"budget\": 5000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 8,\n        \"fullName\": \"Nguyen Thi B\",\n        \"email\": \"nguyenthita@gmail.com\",\n        \"password\": \"password456\",\n        \"position\": \"Director\",\n        \"department\": {\n            \"departmentID\": 1,\n            \"departmentName\": \"Phòng Quản Lý\",\n            \"budget\": 5000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 9,\n        \"fullName\": \"Nguyen Van A\",\n        \"email\": \"admin@gmail.com\",\n        \"password\": \"admin\",\n        \"position\": \"Manager\",\n        \"department\": {\n            \"departmentID\": 1,\n            \"departmentName\": \"Phòng Quản Lý\",\n            \"budget\": 5000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 10,\n        \"fullName\": \"Nguyen Thi Binh\",\n        \"email\": \"admin3@gmail.com\",\n        \"password\": \"$2a$10$.tJ5wo7nCnL1UA7nQw9K2uA5s8BA21qREERAXl0adyFohg7dZGkPW\",\n        \"position\": \"Director\",\n        \"department\": {\n            \"departmentID\": 1,\n            \"departmentName\": \"Phòng Quản Lý\",\n            \"budget\": 5000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 11,\n        \"fullName\": \"Duong Van Linh\",\n        \"email\": \"linh1@gmail.com\",\n        \"password\": \"$2a$10$b1aec/KkJZeN66mwEItwaOAo16E/n7IYfW/Kjf5NKSB1TffnmlqJu\",\n        \"position\": \"Manager\",\n        \"department\": {\n            \"departmentID\": 1,\n            \"departmentName\": \"Phòng Quản Lý\",\n            \"budget\": 5000000\n        },\n        \"role\": \"ROLE_USER\"\n    },\n    {\n        \"employeeID\": 12,\n        \"fullName\": \"Vu Van Linh\",\n        \"email\": \"linh2@gmail.com\",\n        \"password\": \"$2a$10$k719kpjaXjBgt7SgCfZ42eJBsIhU68qxNEcaraKO7KnL1rYshREuO\",\n        \"position\": \"Manager\",\n        \"department\": {\n            \"departmentID\": 1,\n            \"departmentName\": \"Phòng Quản Lý\",\n            \"budget\": 5000000\n        },\n        \"role\": \"ROLE_USER\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "edit employee",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employees/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get 1 employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get 1 employee",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/employees/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:09:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"employeeID\": 1,\n    \"fullName\": \"Nguyen Van A\",\n    \"email\": \"nguyenvana@gmail.com\",\n    \"password\": \"password123\",\n    \"position\": \"Manager\",\n    \"department\": {\n        \"departmentID\": 1,\n        \"departmentName\": \"Phòng Quản Lý\",\n        \"budget\": 5000000\n    },\n    \"role\": \"ROLE_USER\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get by department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employees/department/Phòng IT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"department",
+								"Phòng IT"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by department",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/employees/department/Phòng IT",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employees",
+										"department",
+										"Phòng IT"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:09:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"employeeID\": 3,\n        \"fullName\": \"Le Thi C\",\n        \"email\": \"lethic@gmail.com\",\n        \"password\": \"password123\",\n        \"position\": \"Employee\",\n        \"department\": {\n            \"departmentID\": 3,\n            \"departmentName\": \"Phòng IT\",\n            \"budget\": 1000000\n        },\n        \"role\": \"ROLE_USER\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "equipment",
+			"item": [
+				{
+					"name": "add equip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"equipmentName\": \"Máy in\",\r\n    \"equipmentDescription\": \"Máy in văn phòng\",\r\n    \"purchasePeriod\": 2,\r\n    \"supplierID\": 3,\r\n    \"currentPrice\": 10000000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/equipment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add equip",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"equipmentName\": \"Máy in 2\",\r\n    \"equipmentDescription\": \"Máy in văn phòng\",\r\n    \"purchasePeriod\": 2,\r\n    \"supplierID\": 3,\r\n    \"currentPrice\": 10000000\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/equipment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"equipment"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:14:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"equipmentID\": 7,\n    \"equipmentName\": \"Máy in 2\",\n    \"equipmentDescription\": \"Máy in văn phòng\",\n    \"purchasePeriod\": 2,\n    \"supplier\": {\n        \"supplierID\": 3,\n        \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n        \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n        \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n    },\n    \"currentPrice\": 10000000\n}"
+						}
+					]
+				},
+				{
+					"name": "all equip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/equipment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all equip",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/equipment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"equipment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:03:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"equipmentID\": 3,\n        \"equipmentName\": \"Máy tính bànnnnn\",\n        \"equipmentDescription\": \"Máy tính bàn cấu hình mạnh, sử dụng cho công việc văn phòng và đồ họa.\",\n        \"purchasePeriod\": 2,\n        \"supplier\": {\n            \"supplierID\": 2,\n            \"supplierName\": \"Nhà Cung Cấp HAIANH Computer\",\n            \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\n            \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\n        },\n        \"currentPrice\": 15000000\n    },\n    {\n        \"equipmentID\": 4,\n        \"equipmentName\": \"Máy tính bàn\",\n        \"equipmentDescription\": \"Máy tính bàn cấu hình mạnh, sử dụng cho công việc văn phòng và đồ họa.\",\n        \"purchasePeriod\": 2,\n        \"supplier\": {\n            \"supplierID\": 3,\n            \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n            \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n            \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n        },\n        \"currentPrice\": 200000000\n    },\n    {\n        \"equipmentID\": 5,\n        \"equipmentName\": \"Máy in\",\n        \"equipmentDescription\": \"Máy in văn phòng\",\n        \"purchasePeriod\": 2,\n        \"supplier\": {\n            \"supplierID\": 3,\n            \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n            \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n            \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n        },\n        \"currentPrice\": 10000000\n    },\n    {\n        \"equipmentID\": 6,\n        \"equipmentName\": \"Máy in\",\n        \"equipmentDescription\": \"Máy in văn phòng\",\n        \"purchasePeriod\": 2,\n        \"supplier\": {\n            \"supplierID\": 3,\n            \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n            \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n            \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n        },\n        \"currentPrice\": 10000000\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "edit equip",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"equipmentName\": \"Máy tính bànnnnn\",\r\n    \"equipmentDescription\": \"Máy tính bàn cấu hình mạnh, sử dụng cho công việc văn phòng và đồ họa.\",\r\n    \"purchasePeriod\": 2,\r\n    \"supplierID\": 2,\r\n    \"currentPrice\": 15000000.00\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/equipment/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipment",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit equip",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"equipmentName\": \"Máy tính bànnnnn\",\r\n    \"equipmentDescription\": \"Máy tính bàn cấu hình mạnh, sử dụng cho công việc văn phòng và đồ họa.\",\r\n    \"purchasePeriod\": 2,\r\n    \"supplierID\": 2,\r\n    \"currentPrice\": 15000000.00\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/equipment/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"equipment",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:14:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"equipmentID\": 3,\n    \"equipmentName\": \"Máy tính bànnnnn\",\n    \"equipmentDescription\": \"Máy tính bàn cấu hình mạnh, sử dụng cho công việc văn phòng và đồ họa.\",\n    \"purchasePeriod\": 2,\n    \"supplier\": {\n        \"supplierID\": 2,\n        \"supplierName\": \"Nhà Cung Cấp HAIANH Computer\",\n        \"contactInfo\": \"Phone: 0909876543, Email: nccB@example.com\",\n        \"address\": \"456 Đường DEF, Quận 2, TP HCM\"\n    },\n    \"currentPrice\": 15000000\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete equip",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/equipment/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get 1 equip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/equipment/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipment",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get 1 equip",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/equipment/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"equipment",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 12:44:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"equipmentID\": 5,\n    \"equipmentName\": \"Máy in\",\n    \"equipmentDescription\": \"Máy in văn phòng\",\n    \"purchasePeriod\": 2,\n    \"supplier\": {\n        \"supplierID\": 3,\n        \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n        \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n        \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n    },\n    \"currentPrice\": 10000000\n}"
+						}
+					]
+				},
+				{
+					"name": "supplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/equipment/supplier/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipment",
+								"supplier",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by suipllier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/equipment/supplier/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"equipment",
+										"supplier",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Dec 2024 13:15:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"equipmentID\": 4,\n        \"equipmentName\": \"Máy tính bàn\",\n        \"equipmentDescription\": \"Máy tính bàn cấu hình mạnh, sử dụng cho công việc văn phòng và đồ họa.\",\n        \"purchasePeriod\": 2,\n        \"supplier\": {\n            \"supplierID\": 3,\n            \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n            \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n            \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n        },\n        \"currentPrice\": 200000000\n    },\n    {\n        \"equipmentID\": 5,\n        \"equipmentName\": \"Máy in\",\n        \"equipmentDescription\": \"Máy in văn phòng\",\n        \"purchasePeriod\": 2,\n        \"supplier\": {\n            \"supplierID\": 3,\n            \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n            \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n            \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n        },\n        \"currentPrice\": 10000000\n    },\n    {\n        \"equipmentID\": 6,\n        \"equipmentName\": \"Máy in\",\n        \"equipmentDescription\": \"Máy in văn phòng\",\n        \"purchasePeriod\": 2,\n        \"supplier\": {\n            \"supplierID\": 3,\n            \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n            \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n            \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n        },\n        \"currentPrice\": 10000000\n    },\n    {\n        \"equipmentID\": 7,\n        \"equipmentName\": \"Máy in 2\",\n        \"equipmentDescription\": \"Máy in văn phòng\",\n        \"purchasePeriod\": 2,\n        \"supplier\": {\n            \"supplierID\": 3,\n            \"supplierName\": \"Nhà Cung Cấp CellphoneS\",\n            \"contactInfo\": \"Phone: 0912345678, Email: nccC@example.com\",\n            \"address\": \"789 Đường GHI, Quận 3, TP HCM\"\n        },\n        \"currentPrice\": 10000000\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}

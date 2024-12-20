@@ -4,7 +4,6 @@
     background-color:#1B4079;
     display: flex;
     flex-direction:row;
-    justify-content: flex-end;
     align-items: center;
     height: 60px;
 }
@@ -16,5 +15,10 @@ a{
 }
 .appName{
     color: #CBDF90;
-    margin-right: auto;
+    margin-right: 20px ;
+}
+.userInfo{
+    margin-left: auto;
+    color: #8FAD88;
+    margin-right: 10px;
 }

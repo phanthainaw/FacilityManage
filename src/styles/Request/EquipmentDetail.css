@@ -1,0 +1,15 @@
+.equipmentDetailsContainer{
+    background-color: rgb(255, 255, 255, 0.8);
+    margin: 10px;
+    border-radius: 10px;
+    height: 90vh;
+    overflow: scroll;
+}
+.equipmentDetailContainer{
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}

@@ -1,0 +1,19 @@
+.userContainer{
+    background-color: white;
+    height: 800px;
+    display: grid;
+    grid-template-columns:  1fr 3fr; ;
+}
+.userProfile{
+    box-shadow: 2px 1px 3px 1px #b4b4b4;
+    display: flex;
+    flex-direction: column;
+}
+.userAvatar{
+    width: 100%;
+}
+.userInfo{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
