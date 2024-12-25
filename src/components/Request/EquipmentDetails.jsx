@@ -9,17 +9,13 @@ function EquipmentDetails(props) {
 }
 
 function EquipmentDetail(Equipment) {
-
     const [quantity, setQuantity] = useState(0);
-
     const onQuantityChange = (e) => {
         setQuantity(e.target.value)
     }
-
     function addEquipment() {
         Equipment.setEquipmentList(Equipment.equipmentList.map(equipment => equipment.Id === Equipment.Id ? { ...equipment, Quantity: quantity } : equipment))
     }
-
     return <div className='equipmentDetailContainer'>
         <img src="" alt="Image of equipment" />
         <div>
@@ -37,7 +33,4 @@ function EquipmentDetail(Equipment) {
         </div>
     </div>
 }
-
-
-
 export default EquipmentDetails

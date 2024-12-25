@@ -1,0 +1,118 @@
+.manageContainer {
+    height: 93vh;
+    display: flex;
+}
+
+.manageBody {
+    padding: 10px;
+    margin: 15px;
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+.manageTab {
+    display: flex;
+    flex-direction: row ;
+    gap: 10px;
+}
+
+.changeManageTabButton {
+    min-width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.changeManageTabButton:hover {
+    background-color: #d9d9d9;
+}
+
+.managePane {
+    position: relative;
+    padding: 20px;
+}
+
+.manageForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #8fad88;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.manageForm.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.manage_inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.manage_createFormButton {
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 50px auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: #8fad88;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.manage_createFormButton:hover {
+    background-color: #6e8e6e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table td button {
+    padding: 5px 10px;
+    background-color: #8fad88;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+    background-color: #6e8e6e;
+}

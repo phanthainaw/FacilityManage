@@ -1,12 +1,13 @@
 import '../../styles/Request/RequestForm.css'
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { sendGetRequest,sendPostRequest } from '../../services/HTTP';
 
+const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
 
 function RequestForm(props) {
     const [requestList, setRequestList] = useState([])
     async function getAllRequest() {
-        const data = await sendGetRequest('http://localhost:8080/requests');
+        const data = await sendGetRequest('http://localhost:8080/requests/all/department/currentuser');
         const newData = data.map(request => ({
             Id: request.requestID,
             Date: new Date(request.requestDate).toISOString().split('T')[0],
@@ -14,6 +15,7 @@ function RequestForm(props) {
             Status: request.status
         }));
         setRequestList(newData);
+        console.log(newData);
     }
     useEffect(() => {
         getAllRequest();
@@ -24,18 +26,22 @@ function RequestForm(props) {
     const onDescriptionChange = (e) => {
         setDescription(e.target.value)
     }
-
-    const postRequest = async () => {
-        sendPostRequest('http://localhost:8080/requests', JSON.stringify(props.equipmentList.map(equipment => ({ Id: equipment.Id, Quantity: equipment.Quantity }))))
+    const onQuantityChange = (e) => {
+        const { name, value } = e.target;
+        props.setEquipmentList(props.equipmentList.map(equipment =>  equipment.Id == parseInt(name) ? { ...equipment, Quantity: value } : equipment ))
     }
 
+    const postRequest = async () => {
+        const requestEquipments =  props.equipmentList.filter(equipment => equipment.Quantity > 0).map(equipment => ({equipmentID:equipment.Id, quantity:parseInt(equipment.Quantity)}))
+        sendPostRequest('http://localhost:8080/requests', {employeeID: userInfo.employeeID, description:description, requestEquipments: requestEquipments })
+    }
     const deleteEquipment = (e) => {
         props.setEquipmentList(props.equipmentList.map(equipment => equipment.Id == parseInt(e.target.id) ? { ...equipment, Quantity: 0 } : equipment))
     }
 
-    const viewRequestInfo = async (e) => {
+    const viewRequestInfo = async (id) => {
         props.setAddRequest(false)
-        const data = await sendGetRequest('http://localhost:8080/requests/equipment/6')
+        const data = await sendGetRequest('http://localhost:8080/requests/equipment/'+id)
         const newData = data.map(equipment => ({
             Id: equipment.equipment.equipmentID,
             Name: equipment.equipment.equipmentName,
@@ -46,6 +52,7 @@ function RequestForm(props) {
             Quantity: equipment.quantity
         }));
         props.setEquipmentList(newData);
+        console.log(data)
     }
 
     return (
@@ -65,7 +72,7 @@ function RequestForm(props) {
                             <tr key={index} className='requestRow'>
                                 <td>{index + 1}</td>
                                 <td>{equipment.Name}</td>
-                                <td>{equipment.Quantity}</td>
+                                <td> <input style={{width:'60px'}} type={"number"} name={equipment.Id} onChange={onQuantityChange} value={equipment.Quantity}/></td>
                                 {
                                     !props.addRequest || <td style={{ textAlign: "center" }}>
                                         <div className='actions'>
@@ -94,7 +101,7 @@ function RequestForm(props) {
                         </tr>
                     </thead>
                     <tbody>
-                        {requestList.map(request => <tr key={request.Id} onClick={viewRequestInfo}>
+                        {requestList.map(request => <tr key={request.Id} onClick={()=>viewRequestInfo(request.Id)}>
                             <td >{request.Id}</td>
                             <td>{request.Date}</td>
                             <td>{request.Description}</td>

@@ -1,0 +1,29 @@
+.equipmentAdmin_addEquipmentButton {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.equipmentAdmin_addEquipmentButton:hover {
+    cursor: pointer;
+    background: #e2e2e2;
+    transform: scale(1.015); /* Slightly enlarges the button on hover */
+}
+
+.equipmentAdmin_addEquipmentButton_icon {
+    height: 15px;
+}
+.equipmentAdmin_tableInput{
+    border: none;            /* Removes the border */
+    outline: none;           /* Removes focus outline */
+    background: none;        /* Removes background color */
+    font-size: 16px;         /* Adjust font size */
+    color: #333;             /* Set text color */
+    padding: 5px;            /* Optional: Add some padding for better usability */
+    width: 90%;
+}
+.equipmentAdmin_tableInput:focus{
+    border-bottom: 1px solid #ccc; /* Adds a subtle underline on focus */
+    outline: none;
+}
