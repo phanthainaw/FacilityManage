@@ -1,6 +1,6 @@
 .manageContainer {
-    height: 93vh;
     display: flex;
+    width: auto;
 }
 
 .manageBody {
@@ -37,6 +37,7 @@
 .managePane {
     position: relative;
     padding: 20px;
+    height: 100%;
 }
 
 .manageForm {

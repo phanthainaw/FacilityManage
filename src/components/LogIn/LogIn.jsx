@@ -23,7 +23,9 @@ function LogIn() {
         const data = await sendLogInRequest(logInInfo.email, logInInfo.password);
         if(data){
             sessionStorage.setItem('userInfo', JSON.stringify(data));
-            navigate('/request')
+            if(data.role==='ROLE_ADMIN'){
+                navigate('/admin');
+            } else navigate('/request')
         } else alert('log in failed');
     }
 

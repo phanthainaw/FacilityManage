@@ -4,6 +4,11 @@
     text-align: center;
     transition: transform 0.2s ease, background 0.3s ease;
 }
+.equipmentAdmin_container{
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
 
 .equipmentAdmin_addEquipmentButton:hover {
     cursor: pointer;

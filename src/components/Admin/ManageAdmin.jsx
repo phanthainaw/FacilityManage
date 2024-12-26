@@ -9,7 +9,7 @@ import StockAdmin from "./StockAdmin.jsx";
 import EmployeeAdmin from "./EmployeeAdmin.jsx";
 
 function ManageAdmin() {
-    const [tabState, setTabState] = useState('Equipment & Supplier')
+    const [tabState, setTabState] = useState('Stock')
 
     return (
         <div>

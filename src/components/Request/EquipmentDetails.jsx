@@ -2,7 +2,6 @@ import '../../styles/Request/EquipmentDetail.css'
 import React, { useState } from 'react';
 
 function EquipmentDetails(props) {
-
     return <div className='equipmentDetailsContainer'>
         {props.equipmentList.map((Equipment => <EquipmentDetail addRequest={props.addRequest} equipmentList={props.equipmentList} setEquipmentList={props.setEquipmentList} Id={Equipment.Id} Name={Equipment.Name} Description={Equipment.Description} Price={Equipment.Price} Warranty={Equipment.Warranty} Supplier={Equipment.Supplier} />))}
     </div>

@@ -140,7 +140,6 @@ function Request({request, setEquipments}) {
 function Equipment({equipment, setEquipmentInfo}) {
     async function getEquipmentInfo(equipmentId) {
         const data = await sendGetRequest("http://localhost:8080/equipment/"+equipmentId);
-        console.log(data);
         setEquipmentInfo({
             Id: data.dataID,
             Name: data.equipmentName,

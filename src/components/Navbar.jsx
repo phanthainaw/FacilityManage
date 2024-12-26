@@ -1,8 +1,7 @@
 import '../styles/Navbar.css'
 
-const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
-
-function Navbar(props) {
+function Navbar() {
+    const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
     return (<ul className="navBar">
         <h2 className='appName' > Facility Management System</h2>
         <li><a href="/request">Request</a></li>

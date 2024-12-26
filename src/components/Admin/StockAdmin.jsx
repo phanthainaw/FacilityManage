@@ -1,28 +1,18 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {sendGetRequest} from "../../services/HTTP.js";
 
 export default function StockAdmin() {
-    const [creatingForm, setCreatingForm] = useState(false);
+    useEffect(()=>{
+        getAllPurchasedEquipments()
+    })
+    async function getAllPurchasedEquipments() {
+        const data = sendGetRequest('http://localhost:8080/purchasedEquipment');
+        console.log(data);
+    }
 
-    const toggleForm = () => {
-        setCreatingForm((prevState) => !prevState);
-    };
     return <>
-        <div className={`manageForm ${creatingForm ? "show" : ""}`}>
-            {["Supplier Name", "Contact Info", "Address Name"].map((label, idx) => (
-                <div key={idx} className="manage_inputGroup">
-                    <label>{label}</label>
-                    <input/>
-                </div>))}
-        </div>
-        <h1>Stock</h1>
-
-        {/* Create Button */}
-        <button onClick={toggleForm} className="manage_createFormButton">
-            <FontAwesomeIcon style={{fontSize: "30px"}} icon={faPlus}/>
-            <p>Create</p>
-        </button>
 
         {/* First Table Section */}
         <table>
