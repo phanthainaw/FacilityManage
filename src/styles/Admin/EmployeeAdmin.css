@@ -1,0 +1,76 @@
+/* Employee Admin Container */
+.employeeAdmin_container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 10px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Employee Info Section */
+.employeeAdmin_employeeInfo {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.userAvatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Input Groups */
+.manage_inputGroup,
+.employeAdmin_inputGroup {
+    margin-bottom: 15px;
+}
+
+.manage_inputGroup label,
+.employeAdmin_inputGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.manage_inputGroup input,
+.employeAdmin_inputGroup input {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+.manage_createFormButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.manage_createFormButton:hover {
+    background-color: #0056b3;
+}
+
+.manage_createFormButton p {
+    margin-left: 8px;
+    font-size: 16px;
+}

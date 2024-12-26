@@ -2,9 +2,10 @@ import '../../styles/Request/RequestForm.css'
 import { useState, useEffect } from 'react';
 import { sendGetRequest,sendPostRequest } from '../../services/HTTP';
 
-const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
+
 
 function RequestForm(props) {
+    const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
     const [requestList, setRequestList] = useState([])
     async function getAllRequest() {
         const data = await sendGetRequest('http://localhost:8080/requests/all/department/currentuser');
@@ -33,7 +34,9 @@ function RequestForm(props) {
 
     const postRequest = async () => {
         const requestEquipments =  props.equipmentList.filter(equipment => equipment.Quantity > 0).map(equipment => ({equipmentID:equipment.Id, quantity:parseInt(equipment.Quantity)}))
-        sendPostRequest('http://localhost:8080/requests', {employeeID: userInfo.employeeID, description:description, requestEquipments: requestEquipments })
+        const data=  await sendPostRequest('http://localhost:8080/requests', {employeeID: userInfo.employeeID, description:description, requestEquipments: requestEquipments })
+        if(data){ window.location.reload() }
+        else alert('Request Error, please try again');
     }
     const deleteEquipment = (e) => {
         props.setEquipmentList(props.equipmentList.map(equipment => equipment.Id == parseInt(e.target.id) ? { ...equipment, Quantity: 0 } : equipment))

@@ -42,7 +42,7 @@
 
 .manageForm {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #8fad88;
@@ -54,6 +54,7 @@
     flex-direction: column;
     gap: 15px;
     transition: all 0.3s ease;
+    width: 500px;
 }
 
 .manageForm.show {

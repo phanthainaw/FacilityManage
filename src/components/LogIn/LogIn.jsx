@@ -39,7 +39,7 @@ function LogIn() {
                 </div>
                 <div className="inputGroup">
                     <FontAwesomeIcon icon={faLock} className="icon" />
-                    <input onChange={onLogInInfoChange} name="password" className="logInInput" value={logInInfo.password} type="password" placeholder="Password" />
+                    <input onKeyDown={(e) => e.key === 'Enter' && getUserInfo()} onChange={onLogInInfoChange} name="password" className="logInInput" value={logInInfo.password} type="password" placeholder="Password" />
                 </div>
                 <button onClick={getUserInfo} className="logInButton"><b>Log In</b></button>
             </div>
